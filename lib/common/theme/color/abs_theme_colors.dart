@@ -56,4 +56,6 @@ abstract class AbstractThemeColors {
 
   Color get lessImportantText => AppColors.grey;
 
+  Color get blueText => AppColors.blue;
+
 }
