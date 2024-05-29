@@ -19,15 +19,15 @@ class SearchStockData extends GetxController {
     super.onInit();
   }
 
-  // void search(String text) {
-  //   if (isBlank(text)) {
-  //     searchResult.clear();
-  //     return;
-  //   }
-  //   searchResult.value = stocks.where((element) => element.name.contains(text)).toList();
-  // }
-  //
-  // void addSearchHistory(String stockName) {
-  //   searchHistoryList.insert(0, stockName);
-  // }
+  void search(String text) {
+    if (text.isEmpty) {
+      searchResult.clear();
+      return;
+    }
+    searchResult.value = stocks.where((element) => element.name.contains(text)).toList();
+  }
+
+  void addSearchHistory(String stockName) {
+    searchHistoryList.insert(0, stockName);
+  }
 }

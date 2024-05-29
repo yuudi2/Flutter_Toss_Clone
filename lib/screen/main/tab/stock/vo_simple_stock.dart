@@ -7,4 +7,9 @@ class SimpleStock{
     return SimpleStock(json['name']);
   }
 
+  @override
+  String toString() {
+    return name;
+  }
+
 }
